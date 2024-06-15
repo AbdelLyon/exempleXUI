@@ -1,17 +1,20 @@
 "use client";
-import { XUIProvider, XProviderProps } from "@xefi/xui/providers";
-import { useRouter } from "next/navigation";
-import QueryProvider from "./QueryProvidre";
+import {  XuiQueryProvider, XuiThemeProvider } from "@xefi/xui/providers";
+import { PropsWithChildren } from "react";
 
 
-const Providers = ({ themeProps, children }: XProviderProps) => {
-  const router = useRouter();
+const Providers = ({  children }: PropsWithChildren) => {
 
 
   return (
-  <XUIProvider navigate={router.push} themeProps={themeProps}>
-    <QueryProvider> {children} </QueryProvider>
-  </XUIProvider>);
+  <XuiThemeProvider 
+    attribute='class'
+    defaultTheme='light'
+    enableSystem
+    disableTransitionOnChange
+  >
+    <XuiQueryProvider > {children} </XuiQueryProvider>
+  </XuiThemeProvider>);
 };
 
 export default Providers;

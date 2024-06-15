@@ -2,12 +2,12 @@
 import { ChangeEvent, useCallback, useState } from "react";
 import useGetData from "@/hooks/useGetData";
 import { ExtendedProps, Movie } from "../../models/Movie";
-import { XComboSelect, XSelect, XInput, XTextarea, XCheckbox, XRadioList, RadioGroupOption } from '@xefi/xui/form';
+import { RadioGroupOption, XuiCheckbox, XuiInput, XuiRadio, XuiSelect, XuiSelectSearch, XuiTextarea } from '@xefi/xui/form';
 
 const plans = [
-   { name: 'Startup', available: true },
-   { name: 'Business', available: true },
-   { name: 'Enterprise', available: false },
+   { label: 'Startup', available: true },
+   { label: 'Business', available: true },
+   { label: 'Enterprise', available: false },
 ];
 const FormComponent = () => {
    const [selected, setSelected] = useState<Partial<Movie>>({
@@ -45,52 +45,52 @@ const FormComponent = () => {
 
    return (
       <form
-         className="border border-border min-h-[400px] rounded-md mt-10 p-4"
+         className="border border-border w-2/4 min-h-[400px] rounded-md mt-10 p-4"
       >
 
-         <div className="grid grid-cols-3 gap-4">
+         <div className="grid grid-cols-1 gap-4">
 
-            <XInput
+            <XuiInput
                name="name"
                value={inputValue}
                onChange={handleInputChange}
                placeholder="Name"
-               type="search"
-               iconClassName="h-4 w-4"
+               type="email"
+               iconClassName="h-5 w-5"
             />
 
-            <XComboSelect
+            <XuiSelectSearch
                options={data}
                selectionKeys={["title"]}
                fetchNextPage={fetchNextPage}
-               onSelect={handleSelect}
-               selected={selected as ExtendedProps}
+               onSelect={handleSelect as any}
+               selected={selected as any}
                label="Movies"
                isFetchingNextPage={isFetchingNextPage}
                placeholder="Rechercher..."
+               
             />
 
 
-            <XSelect
+            <XuiSelect
                options={data}
                selectionKeys={["title"]}
                fetchNextPage={fetchNextPage}
-               onSelect={handleSelect}
-               selected={selected}
+               onSelect={handleSelect as any}
+               selected={selected as any}
                label="Movies"
                isFetchingNextPage={isFetchingNextPage}
                placeholder="Sélectionner une option..."
             />
-            <XTextarea
+            <XuiTextarea
                value={textareaValue}
                onChange={handleTextareaChange}
                rows={6}
-               className="w-max mb-2"
             />
          </div>
-         <div className="flex justify-between">
-            <XCheckbox label="accepter les conditions" />
-            <XRadioList
+         <div className="flex mt-4 justify-between">
+            <XuiCheckbox label="accepter les conditions" />
+            <XuiRadio
                options={plans}
                selected={radioSelected as RadioGroupOption}
                setSelected={handleRadioSelected}
