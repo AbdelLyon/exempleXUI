@@ -1,11 +1,8 @@
-import ModalComponent from '@/components/ModalComponent';
-import React from 'react'
+"use client";
+import ModalComponent from "@/components/ModalComponent";
 
 const page = () => {
-  return (
+  return <ModalComponent />;
+};
 
-      <ModalComponent />
-  )
-}
-
-export default page
+export default page;
