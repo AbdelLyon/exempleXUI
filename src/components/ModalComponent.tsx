@@ -1,11 +1,16 @@
 "use client";
-import { useState } from "react";
 import { XuiModal } from "@xefi/xui/modal";
-import { XuiButton, XuiButtonsModal } from "@xefi/xui/button";
+import { XuiButtonsModal } from "@xefi/xui/button";
 
-const ModalComponent = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const ModalComponent = ({
+  trigger,
+  handleClose,
+  isOpen,
+}: {
+  trigger: () => JSX.Element;
+  handleClose: () => void;
+  isOpen: boolean;
+}) => {
   return (
     <XuiModal
       isBackdrop
@@ -13,8 +18,8 @@ const ModalComponent = () => {
         <XuiButtonsModal
           buttonActionContent="Confirmer"
           buttonCloseContent="Annuler"
-          onAction={() => console.log("action")}
-          onClose={() => setIsOpen(false)}
+          onAction={() => {}}
+          onClose={handleClose}
         />
       )}
       isOpen={isOpen}
@@ -22,10 +27,8 @@ const ModalComponent = () => {
       transitions={{
         enter: "lks",
       }}
-      trigger={() => (
-        <XuiButton onClick={() => setIsOpen(true)}>Open dialog</XuiButton>
-      )}
-      onClose={() => setIsOpen(false)}
+      trigger={trigger}
+      onClose={handleClose}
     >
       <p className="mt-2 text-sm/6">
         Your payment has been successfully submitted. We’ve sent you an email

@@ -7,10 +7,10 @@
 }
 
 :root {
-	--background: 0 0% 100%;
-	--foreground: 0 0% 90%;
+	--background: 0 0% 98%;
+	--foreground: 0 0% 92%;
 	--sidebar: 0, 0%, 25%;
-	--card: 0, 0%, 90%;
+	--card: 0, 0%, 94%;
 	--card-foreground: 0 0% 10%;
 	--popover: 0 0% 95%;
 	--popover-foreground: 0 95% 7%;
@@ -23,21 +23,21 @@
 	--accent: -38 10% 80%;
 	--accent-foreground: 0 0% 10%;
 	--destructive: 0 50% 30%;
-	--destructive-foreground: 0 0% 90%;
-	--border: 0 0% 90%;
+	--destructive-foreground: 0 0% 92%;
+	--border: 0 0% 92%;
 	--input: 0 20% 18%;
 	--placeholder : 0, 0%, 56%; 
 	--ring: 0 73.7% 41.8%;
 	--radius: 0.5rem;
 }
 .dark {
-	--background: 0, 0%, 12%;
+	--background: 200, 4%, 14%;
 	--foreground: 0, 0%, 18%;
 	--sidebar: 0, 0%, 25%;
-	--card: 0, 0%, 18%;
-	--card-foreground: 0 0% 90%;
+	--card: 200, 4%, 18%;
+	--card-foreground: 0 0% 92%;
 	--popover: 0 10% 5%;
-	--popover-foreground: 0 0% 90%;
+	--popover-foreground: 0 0% 92%;
 	--primary: 0 73.7% 41.8%;
 	--primary-foreground: 0 0% 100%;
 	--secondary: 0 10% 10%;
@@ -45,12 +45,150 @@
 	--muted: -38 10% 15%;
 	--muted-foreground: 0 0% 60%;
 	--accent: -38 10% 15%;
-	--accent-foreground: 0 0% 90%;
+	--accent-foreground: 0 0% 92%;
 	--destructive: 0 50% 30%;
-	--destructive-foreground: 0 0% 90%;
-	--border: 0 0% 24%;
+	--destructive-foreground: 0 0% 92%;
+	--border: 0 0% 19%;
 	--input: 0 20% 18%;
 	--placeholder : 0, 0%, 56%; 
 	--ring: 0 73.7% 41.8%;
 	--radius: 0.5rem;
 }
+
+.ag-theme-quartz {
+	--ag-header-background-color : hsl(0, 0%, 94%)  ;
+	--ag-row-hover-color : hsl(0, 0%, 94%);
+	--ag-row-border-color : hsl(0, 0%, 90%);
+	--ag-selected-row-background-color: transparant;
+	--ag-checkbox-checked-color: hsl(var(--primary));
+
+
+
+	/* --ag-odd-row-background-color: #e6e6e6; */
+
+}
+
+.ag-theme-quartz-dark {
+	--ag-background-color : hsl(200, 4%, 14%);
+	--ag-header-background-color : hsl(200, 4%, 18%)  ;
+	--ag-row-hover-color : hsl(200, 4%, 18%);
+	--ag-row-border-color : hsl(200, 3%, 24%);
+	--ag-checkbox-checked-color: hsl(var(--primary));
+
+
+	/* --ag-odd-row-background-color: #323435; */
+
+}
+
+/* p{
+	color: #1f1f1f;
+} */
+
+
+.ag-theme-alpin {
+	--ag-alpine-active-color: #2196f3;
+	--ag-selected-row-background-color: rgba(33, 150, 243, .3);
+	--ag-row-hover-color: rgba(33, 150, 243, .1);
+	--ag-column-hover-color: rgba(33, 150, 243, .1);
+	--ag-input-focus-border-color: rgba(33, 150, 243, .4);
+	--ag-range-selection-background-color: rgba(33, 150, 243, .2);
+	--ag-range-selection-background-color-2: rgba(33, 150, 243, .36);
+	--ag-range-selection-background-color-3: rgba(33, 150, 243, .49);
+	--ag-range-selection-background-color-4: rgba(33, 150, 243, .59);
+	--ag-background-color: var(hsl(--background));
+	--ag-foreground-color: #181d1f;
+	--ag-border-color: #babfc7;
+	--ag-secondary-border-color: #dde2eb;
+	--ag-header-background-color: #f8f8f8;
+	--ag-tooltip-background-color: #f8f8f8;
+	--ag-odd-row-background-color: #fcfcfc;
+	--ag-control-panel-background-color: #f8f8f8;
+	--ag-subheader-background-color: #fff;
+	--ag-invalid-color: #e02525;
+	--ag-checkbox-unchecked-color: #999;
+	--ag-advanced-filter-join-pill-color: #f08e8d;
+	--ag-advanced-filter-column-pill-color: #a6e194;
+	--ag-advanced-filter-option-pill-color: #f3c08b;
+	--ag-advanced-filter-value-pill-color: #85c0e4;
+	--ag-checkbox-background-color: var(--ag-background-color);
+	--ag-checkbox-checked-color: var(--ag-alpine-active-color);
+	--ag-range-selection-border-color: var(--ag-alpine-active-color);
+	--ag-secondary-foreground-color: var(--ag-foreground-color);
+	--ag-input-border-color: var(--ag-border-color);
+	--ag-input-border-color-invalid: var(--ag-invalid-color);
+	--ag-input-focus-box-shadow: 0 0 2px .1rem var(--ag-input-focus-border-color);
+	--ag-panel-background-color: var(--ag-header-background-color);
+	--ag-menu-background-color: var(--ag-header-background-color);
+	--ag-disabled-foreground-color: rgba(24, 29, 31, .5);
+	--ag-chip-background-color: rgba(24, 29, 31, .07);
+	--ag-input-disabled-border-color: rgba(186, 191, 199, .3);
+	--ag-input-disabled-background-color: rgba(186, 191, 199, .15);
+	--ag-borders: solid 1px;
+	--ag-border-radius: 3px;
+	--ag-borders-side-button: none;
+	--ag-side-button-selected-background-color: transparent;
+	--ag-header-column-resize-handle-display: block;
+	--ag-header-column-resize-handle-width: 2px;
+	--ag-header-column-resize-handle-height: 30%;
+	--ag-grid-size: 6px;
+	--ag-icon-size: 16px;
+	--ag-row-height: calc(var(--ag-grid-size) * 7);
+	--ag-header-height: calc(var(--ag-grid-size) * 8);
+	--ag-list-item-height: calc(var(--ag-grid-size) * 4);
+	--ag-column-select-indent-size: var(--ag-icon-size);
+	--ag-foreground-color: #000;
+	--ag-data-color: var(--ag-foreground-color);
+	--ag-secondary-foreground-color: var(--ag-foreground-color);
+	--ag-header-foreground-color: var(--ag-secondary-foreground-color);
+	--ag-disabled-foreground-color: rgba(0, 0, 0, .5);
+	--ag-background-color: #fff;
+	--ag-header-background-color: transparent;
+	--ag-tooltip-background-color: transparent;
+	--ag-subheader-background-color: transparent;
+	--ag-subheader-toolbar-background-color: transparent;
+	--ag-control-panel-background-color: transparent;
+	--ag-side-button-selected-background-color: var(--ag-control-panel-background-color);
+	--ag-selected-row-background-color: #BBB;
+	--ag-odd-row-background-color: var(--ag-background-color);
+	--ag-modal-overlay-background-color: rgba(255, 255, 255, .66);
+	--ag-menu-background-color: var(--ag-background-color);
+	--ag-menu-border-color: var(--ag-border-color);
+	--ag-panel-background-color: var(--ag-background-color);
+	--ag-panel-border-color: var(--ag-border-color);
+	--ag-row-hover-color: transparent;
+	--ag-column-hover-color: transparent;
+	--ag-range-selection-border-color: var(--ag-foreground-color);
+	--ag-range-selection-border-style: solid;
+	--ag-range-selection-background-color: rgba(0, 0, 0, .2);
+	--ag-range-selection-background-color-2: var(--ag-range-selection-background-color);
+	--ag-range-selection-background-color-3: var(--ag-range-selection-background-color);
+	--ag-range-selection-background-color-4: var(--ag-range-selection-background-color);
+	--ag-range-selection-highlight-color: var(--ag-range-selection-border-color);
+	--ag-selected-tab-underline-color: var(--ag-range-selection-border-color);
+	--ag-selected-tab-underline-width: 0;
+	--ag-selected-tab-underline-transition-speed: 0s;
+	--ag-range-selection-chart-category-background-color: rgba(0, 255, 132, .1);
+	--ag-range-selection-chart-background-color: rgba(0, 88, 255, .1);
+	--ag-header-cell-hover-background-color: transparent;
+	--ag-header-cell-moving-background-color: var(--ag-background-color);
+	--ag-value-change-value-highlight-background-color: rgba(22, 160, 133, .5);
+	--ag-value-change-delta-up-color: #43a047;
+	--ag-value-change-delta-down-color: #e53935;
+	--ag-row-loading-skeleton-effect-color: rgba(66, 66, 66, .2);
+	--ag-chip-background-color: transparent;
+	--ag-chip-border-color: var(--ag-chip-background-color);
+	--ag-borders: solid 1px;
+	--ag-border-color: rgba(0, 0, 0, .25);
+	--ag-borders-critical: var(--ag-borders);
+	--ag-borders-secondary: var(--ag-borders);
+	--ag-secondary-border-color: var(--ag-border-color);
+	--ag-row-border-style: solid;
+	--ag-row-border-width: 1px;
+	--ag-cell-horizontal-border: solid transparent;
+	--ag-borders-input: var(--ag-borders-secondary);
+
+};
+
+/* p{
+	color: #e6e6e6;
+} */

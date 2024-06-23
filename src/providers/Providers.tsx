@@ -1,20 +1,18 @@
 "use client";
-import {  XuiQueryProvider, XuiThemeProvider } from "@xefi/xui/providers";
+import { XuiQueryProvider, XuiThemeProvider } from "@xefi/xui/providers";
 import { PropsWithChildren } from "react";
 
-
-const Providers = ({  children }: PropsWithChildren) => {
-
-
+const Providers = ({ children }: PropsWithChildren) => {
   return (
-  <XuiThemeProvider 
-    attribute='class'
-    defaultTheme='light'
-    enableSystem
-    disableTransitionOnChange
-  >
-    <XuiQueryProvider > {children} </XuiQueryProvider>
-  </XuiThemeProvider>);
+    <XuiThemeProvider
+      disableTransitionOnChange
+      enableSystem
+      attribute="class"
+      defaultTheme="light"
+    >
+      <XuiQueryProvider> {children} </XuiQueryProvider>
+    </XuiThemeProvider>
+  );
 };
 
 export default Providers;
