@@ -2,90 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+	.ag-theme-quartz {
+		--ag-background-color: hsl(var(--background));
+		--ag-header-background-color: hsl(var(--card));
+		--ag-row-hover-color: hsl(var(--card));
+		--ag-row-border-color:hsl(var(--border));
+		--ag-checkbox-checked-color: hsl(var(--primary));
+		--ag-active-color : hsl(var(--card));
+	}
+	.ag-theme-quartz-dark {
+	  --ag-background-color: hsl(var(--background));
+	  --ag-header-background-color: hsl(var(--card));
+	  --ag-row-hover-color: hsl(var(--card));
+	  --ag-row-border-color:hsl(var(--border));
+	  --ag-checkbox-checked-color: hsl(var(--primary));
+	  --ag-foreground-color: hsl(0, 0%, 100%);
+	  --ag-active-color : hsl(var(--card));
+	}
+ }
+
 * {
-	scrollbar-width: thin;
+  scrollbar-width: thin;
 }
 
 :root {
-	--background: 0 0% 98%;
-	--foreground: 0 0% 92%;
-	--sidebar: 0, 0%, 25%;
-	--card: 0, 0%, 94%;
-	--card-foreground: 0 0% 10%;
-	--popover: 0 0% 95%;
-	--popover-foreground: 0 95% 7%;
-	--primary: 0 73.7% 41.8%;
-	--primary-foreground: 0 0% 100%;
-	--secondary: 0 10% 70%;
-	--secondary-foreground: 0 0% 0%;
-	--muted: -38 10% 85%;
-	--muted-foreground: 0 0% 35%;
-	--accent: -38 10% 80%;
-	--accent-foreground: 0 0% 10%;
-	--destructive: 0 50% 30%;
-	--destructive-foreground: 0 0% 92%;
-	--border: 0 0% 92%;
-	--input: 0 20% 18%;
-	--placeholder : 0, 0%, 56%; 
-	--ring: 0 73.7% 41.8%;
-	--radius: 0.5rem;
+  --background: 0 0% 98%;
+  --foreground: 0 0% 92%;
+  --sidebar: 0, 0%, 25%;
+  --card: 0, 0%, 94%;
+  --card-foreground: 0 0% 10%;
+  --popover: 0 0% 95%;
+  --popover-foreground: 0 95% 7%;
+  --primary: 0 73.7% 41.8%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 10% 70%;
+  --secondary-foreground: 0 0% 0%;
+  --muted: -38 10% 85%;
+  --muted-foreground: 0 0% 35%;
+  --accent: -38 10% 80%;
+  --accent-foreground: 0 0% 10%;
+  --destructive: 0 50% 30%;
+  --destructive-foreground: 0 0% 92%;
+  --border: 0 0% 92%;
+  --input: 0 20% 18%;
+  --placeholder: 0, 0%, 56%;
+  --ring: 0 73.7% 41.8%;
+  --radius: 0.5rem;
 }
 .dark {
-	--background: 200, 4%, 14%;
-	--foreground: 0, 0%, 18%;
-	--sidebar: 0, 0%, 25%;
-	--card: 200, 4%, 18%;
-	--card-foreground: 0 0% 92%;
-	--popover: 0 10% 5%;
-	--popover-foreground: 0 0% 92%;
-	--primary: 0 73.7% 41.8%;
-	--primary-foreground: 0 0% 100%;
-	--secondary: 0 10% 10%;
-	--secondary-foreground: 0 0% 100%;
-	--muted: -38 10% 15%;
-	--muted-foreground: 0 0% 60%;
-	--accent: -38 10% 15%;
-	--accent-foreground: 0 0% 92%;
-	--destructive: 0 50% 30%;
-	--destructive-foreground: 0 0% 92%;
-	--border: 0 0% 19%;
-	--input: 0 20% 18%;
-	--placeholder : 0, 0%, 56%; 
-	--ring: 0 73.7% 41.8%;
-	--radius: 0.5rem;
+  --background: 200, 4%, 14%;
+  --foreground: 0, 0%, 18%;
+  --sidebar: 0, 0%, 25%;
+  --card: 200, 4%, 18%;
+  --card-foreground: 0 0% 92%;
+  --popover: 0 10% 5%;
+  --popover-foreground: 0 0% 92%;
+  --primary: 0 73.7% 41.8%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 10% 10%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: -38 10% 15%;
+  --muted-foreground: 0 0% 60%;
+  --accent: -38 10% 15%;
+  --accent-foreground: 0 0% 92%;
+  --destructive: 0 50% 30%;
+  --destructive-foreground: 0 0% 92%;
+  --border: 0 0% 19%;
+  --input: 0 20% 18%;
+  --placeholder: 0, 0%, 56%;
+  --ring: 0 73.7% 41.8%;
+  --radius: 0.5rem;
 }
 
-.ag-theme-quartz {
-	--ag-header-background-color : hsl(0, 0%, 94%)  ;
-	--ag-row-hover-color : hsl(0, 0%, 94%);
-	--ag-row-border-color : hsl(0, 0%, 90%);
-	--ag-selected-row-background-color: transparant;
-	--ag-checkbox-checked-color: hsl(var(--primary));
 
 
 
-	/* --ag-odd-row-background-color: #e6e6e6; */
 
-}
-
-.ag-theme-quartz-dark {
-	--ag-background-color : hsl(200, 4%, 14%);
-	--ag-header-background-color : hsl(200, 4%, 18%)  ;
-	--ag-row-hover-color : hsl(200, 4%, 18%);
-	--ag-row-border-color : hsl(200, 3%, 24%);
-	--ag-checkbox-checked-color: hsl(var(--primary));
-
-
-	/* --ag-odd-row-background-color: #323435; */
-
-}
-
-/* p{
-	color: #1f1f1f;
-} */
-
-
-.ag-theme-alpin {
+/* 
+.ag-theme {
 	--ag-alpine-active-color: #2196f3;
 	--ag-selected-row-background-color: rgba(33, 150, 243, .3);
 	--ag-row-hover-color: rgba(33, 150, 243, .1);
@@ -187,8 +182,4 @@
 	--ag-cell-horizontal-border: solid transparent;
 	--ag-borders-input: var(--ag-borders-secondary);
 
-};
-
-/* p{
-	color: #e6e6e6;
-} */
+}; */

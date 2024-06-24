@@ -37,7 +37,7 @@ const CardComponent = () => {
                 alt="test-img"
                 className="rounded-t-md "
                 height={50}
-                objectFit="cover"
+                priority={true}
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                 width={250}
               />

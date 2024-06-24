@@ -1,7 +1,6 @@
 "use client";
-import React, { useCallback, useState } from "react";
-import { RowSelectedEvent } from "ag-grid-community";
-import { XDataGrid } from "@xefi/xui/dataGrid";
+import React, { useCallback } from "react";
+import { RowSelectedEvent, XuiDataGrid } from "@xefi/xui/dataGrid";
 
 import { Movie } from "../../models/Movie";
 
@@ -11,27 +10,20 @@ import useColDefs from "@/hooks/useColDefs";
 const DataGridComponent: React.FC = () => {
   const { data: rowsData, fetchNextPage, isFetchingNextPage } = useGetData();
   const { colDefs } = useColDefs();
-  const [rowSelected, setRowSelected] = useState<Partial<Movie>>();
 
-  const onRowSelected = useCallback(
-    (event: RowSelectedEvent<Partial<Movie>>) => {
-      if (event.data) {
-        setRowSelected(event.data);
-      }
-    },
-    [],
-  );
+  const onRowSelected = useCallback((event: RowSelectedEvent<Movie>) => {
+    console.log(event.data);
+  }, []);
 
   return (
-    <div className="ag-theme-alpine-dark">
-      <XDataGrid
-        className={"mt-20"}
-        cols={colDefs}
+    <div className="ag-theme-quartz dark:ag-theme-quartz-dark">
+      <XuiDataGrid
+        columnDefs={colDefs}
         height={600}
         isFetchingNextPage={isFetchingNextPage}
         rowClass="hover:bg-[#fafafb]"
+        rowData={rowsData}
         rowSelection="multiple"
-        rows={rowsData}
         width="70vw"
         onBodyScrollEnd={() => fetchNextPage()}
         onRowSelected={onRowSelected}

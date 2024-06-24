@@ -4,7 +4,13 @@ const nextConfig = {
     API_KEY: process.env.API_KEY,
   },
   images: {
-    domains: ["images.unsplash.com", "image.tmdb.org"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "image.tmdb.org",
+        port: "",
+      },
+    ],
   },
 };
 
